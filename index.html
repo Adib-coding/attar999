@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090711">
+  <title>ATTAR999 | Neon Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <nav class="navbar">
+    <a href="#" class="logo">ATTAR<span>999</span></a>
+    <div class="nav-right">
+      <span class="demo-badge"><i></i> DEMO MODE</span>
+      <button id="soundBtn" class="sound-btn">🔇 SOUND</button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero-tag">✦ NEXT LEVEL VIRTUAL ARCADE ✦</div>
+      <h1>WELCOME TO<br><span class="gradient-text">ATTAR999</span></h1>
+      <p class="hero-desc">
+        Enter the neon universe. Test your luck in a virtual game world.
+      </p>
+      <a href="#arcade" class="primary-btn">EXPLORE ARCADE <span>↘</span></a>
+
+      <div class="hero-stats">
+        <div><strong>06</strong><small>GAME SYMBOLS</small></div>
+        <div><strong>∞</strong><small>VIRTUAL FUN</small></div>
+        <div><strong>100%</strong><small>DEMO MODE</small></div>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="stat-card balance-card">
+        <div class="card-top">
+          <span>YOUR VIRTUAL BALANCE</span>
+          <span class="stat-icon">✦</span>
+        </div>
+        <h2 id="saldo">1.000</h2>
+        <p>✦ ARCADE COINS</p>
+        <div class="balance-line"><span></span></div>
+        <small>Saldo simulasi, tidak memiliki nilai uang.</small>
+      </article>
+
+      <article class="stat-card">
+        <span class="small-label">TOTAL SPIN</span>
+        <div class="big-number" id="totalSpin">0</div>
+        <p class="stat-caption">Putaran permainan</p>
+        <div class="mini-chart">▂ ▄ ▃ ▆ ▅ ▇ ▄ ▆</div>
+      </article>
+
+      <article class="stat-card">
+        <span class="small-label">TOTAL HADIAH</span>
+        <div class="big-number gold-text" id="totalHadiah">0</div>
+        <p class="stat-caption">Koin virtual didapat</p>
+        <div class="reward-icon">🏆</div>
+      </article>
+    </section>
+
+    <section id="arcade" class="arcade-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CHOOSE YOUR GAME</span>
+          <h2>Arcade <span class="gradient-text">Zone</span></h2>
+        </div>
+        <span class="online-badge"><i></i> SYSTEM ONLINE</span>
+      </div>
+
+      <div class="game-grid">
+
+        <article class="game-card featured">
+          <div class="game-cover">
+            <div class="cover-orb"></div>
+            <span class="game-number">GAME #001</span>
+            <div class="cover-symbol">🎰</div>
+            <h3>LUCKY SPIN</h3>
+            <p>Match the symbols!</p>
+            <span class="featured-tag">FEATURED GAME</span>
+          </div>
+
+          <div class="game-body">
+            <div class="machine">
+              <div id="hasil" class="reels">
+                <span>🍒</span><span>⭐</span><span>💎</span>
+              </div>
+              <div class="machine-lights">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="result-box">
+              <span class="result-dot"></span>
+              <p id="pesan">Sistem siap. Mulai simulasi!</p>
+            </div>
+
+            <div class="spin-info">
+              <span>BIAYA SIMULASI</span>
+              <strong>50 COINS</strong>
+            </div>
+
+            <button id="spin" class="spin-btn">
+              <span class="spin-icon">✦</span>
+              <span id="spinLabel">SPIN NOW</span>
+              <span class="spin-arrow">→</span>
+            </button>
+
+            <button id="bonus" class="bonus-btn">
+              🎁 KLAIM BONUS +500 KOIN
+            </button>
+            <p class="bonus-note">Bonus gratis virtual, tanpa deposit.</p>
+          </div>
+        </article>
+
+        <aside class="side-column">
+          <article class="info-card profile-card">
+            <div class="profile-avatar">A</div>
+            <div>
+              <span class="eyebrow">PLAYER PROFILE</span>
+              <h3>ATTAR PLAYER</h3>
+              <p>✦ Rookie Explorer</p>
+            </div>
+            <span class="level-badge">LV.01</span>
+          </article>
+
+          <article class="info-card">
+            <div class="side-title">
+              <h3>🏆 Achievement</h3>
+              <span>01 / 03</span>
+            </div>
+            <div class="achievement">
+              <span class="achievement-icon">🎮</span>
+              <div>
+                <strong>First Spin</strong>
+                <p>Lakukan putaran pertamamu</p>
+                <div class="progress"><span id="progressSpin"></span></div>
+              </div>
+            </div>
+            <div class="achievement">
+              <span class="achievement-icon">💰</span>
+              <div>
+                <strong>Coin Collector</strong>
+                <p>Kumpulkan 2.000 koin</p>
+                <div class="progress"><span id="progressCoin"></span></div>
+              </div>
+            </div>
+            <div class="achievement">
+              <span class="achievement-icon">✨</span>
+              <div>
+                <strong>Arcade Rookie</strong>
+                <p>Main sebanyak 10 kali</p>
+                <div class="progress"><span id="progressTen"></span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="side-title">
+              <h3>📜 Spin History</h3>
+              <span id="historyCount">0 / 5</span>
+            </div>
+            <div id="history" class="history">
+              <p class="empty-history">Belum ada permainan.</p>
+            </div>
+          </article>
+
+          <article class="bonus-banner">
+            <span>DAILY VIRTUAL GIFT</span>
+            <h3>Free Coin Drop ✨</h3>
+            <p>Ambil bonus untuk menambah saldo simulasi.</p>
+            <button id="gift" class="gift-btn">CLAIM GIFT +500</button>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notice">
+      <span>ⓘ</span>
+      <p><strong>DEMO ENVIRONMENT</strong><br>
+      ATTAR999 adalah proyek latihan web. Semua koin, hadiah, dan hasil permainan bersifat virtual. Tidak ada transaksi uang asli.</p>
+    </section>
+
+    <footer>
+      <a href="#" class="logo">ATTAR<span>999</span></a>
+      <p>NEON ARCADE EXPERIENCE</p>
+      <small>BUILT FOR FUN · POWERED BY HTML, CSS & JAVASCRIPT</small>
+    </footer>
+
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
